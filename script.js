@@ -51,6 +51,21 @@ function changeHorlogeColor() {
      document.body.style.backgroundColor = chColor1;
  }
 
+var ladate = new Date();
+document.write("Heure brute : ");
+document.write(ladate.getHours()+":"+ ladate.getMinutes()+":"+ ladate.getSeconds());
+
+document.write("<BR>");
+
+var h = ladate.getHours();
+if (h < 10) {h = "0" + h}
+var m=ladate.getMinutes();
+if (m < 10) {m = "0" + m}
+var s = ladate.getSeconds();
+if ( s <10) {s = "0" + s}
+document.write("Heure formatée : ");
+document.write(h +":"+ m +":"+ s);
+
 
 
 

@@ -9,6 +9,8 @@ body{
     margin-left: auto;
     box-shadow: 2px 2px 5px #1d1d1d;
     margin-top: 80px;
+    background-color: #333;
+!important z-index: 9999;
 
 }
 .aig{
@@ -19,7 +21,6 @@ body{
 
 #horloge{
     position: relative;
-    /*background: url("img/cadran.png");*/
     height: 568px;
     width: 567px;
     border: 3px solid white;
@@ -33,33 +34,42 @@ body{
 #btnAll{
     margin-right: auto;
     margin-left: 30%;
+    z-index: 1;
 
 
 }
 #btn{
     width: auto;
-    height: auto;
-    margin-top: 30px;
+    height: 100px;
     transition: transform .4s ease;
     padding: 10px;
+    margin-left: 1%;
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
 }
 #btn1{
     width: auto;
-    height: auto;
-    margin-top: 30px;
+    height: 100px;
     transition: transform .4s ease;
     padding: 10px;
+    margin-left: 30%;
+    margin-top: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
 
 }
 #btn1:hover{
-    transform: translateX(20%);
+    transform: translateY(5%);
     background-color: orange;
     color: white;
     border-style: none;
 
  }
 #btn:hover{
-    transform: translateX(-20%);
+    transform: translateY(5%);
     background-color:orangered;
     border: none;
     color: white;
