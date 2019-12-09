@@ -1,0 +1,67 @@
+body{
+    background: #333333;
+}
+#cadre{
+    border: 2px solid #242424;
+    width: 700px;
+    height: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px #1d1d1d;
+    margin-top: 80px;
+
+}
+.aig{
+    position: absolute;
+    bottom: 283px;
+    transform-origin: bottom center;
+}
+
+#horloge{
+    position: relative;
+    /*background: url("img/cadran.png");*/
+    height: 568px;
+    width: 567px;
+    border: 3px solid white;
+    border-radius: 284px;
+    background-color: orange;
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+#btnAll{
+    margin-right: auto;
+    margin-left: 30%;
+
+
+}
+#btn{
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    transition: transform .4s ease;
+    padding: 10px;
+}
+#btn1{
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    transition: transform .4s ease;
+    padding: 10px;
+
+}
+#btn1:hover{
+    transform: translateX(20%);
+    background-color: orange;
+    color: white;
+    border-style: none;
+
+ }
+#btn:hover{
+    transform: translateX(-20%);
+    background-color:orangered;
+    border: none;
+    color: white;
+
+}
