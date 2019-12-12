@@ -67,3 +67,9 @@ body{
     border-style: none;
 
  }
+#btn1:hover, #btn:hover{
+    background-color: orange;
+    color: white;
+    border-style: none;
+
+}
