@@ -1,14 +1,14 @@
 body{
     background: #333333;
+    display: flex;
+    margin-top: 60px;
 }
 #cadre{
     border: 2px solid #242424;
     width: 700px;
     height: 700px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     box-shadow: 2px 2px 5px #1d1d1d;
-    margin-top: 80px;
     background-color: #333;
 !important z-index: 9999;
 
@@ -17,6 +17,7 @@ body{
     position: absolute;
     bottom: 283px;
     transform-origin: bottom center;
+
 }
 
 #horloge{
@@ -26,15 +27,13 @@ body{
     border: 3px solid white;
     border-radius: 284px;
     background-color: orange;
-    margin-right: auto;
-    margin-left: auto;
-
+    margin: auto;
 
 }
-#btnAll{
-    margin-right: auto;
-    margin-left: 30%;
-    z-index: 1;
+    #btnAll{
+   position: absolute;
+   margin-top: 750px;
+   margin-left: 470px;
 
 
 }
@@ -43,35 +42,28 @@ body{
     height: 100px;
     transition: transform .4s ease;
     padding: 10px;
-    margin-left: 1%;
-    margin-top: 10px;
     background-color: #333;
     border: none;
     color: white;
+    margin: auto;
 }
 #btn1{
     width: auto;
     height: 100px;
     transition: transform .4s ease;
     padding: 10px;
-    margin-left: 30%;
-    margin-top: 10px;
+    margin: auto;
     background-color: #333;
     border: none;
     color: white;
+    transform: scale(1);
 
 }
-#btn1:hover{
-    transform: translateY(5%);
+#btn1:active, #btn:active{
+    transform: scale(.97);
+    transition: transform .2s;
     background-color: orange;
     color: white;
     border-style: none;
 
  }
-#btn:hover{
-    transform: translateY(5%);
-    background-color:orangered;
-    border: none;
-    color: white;
-
-}
