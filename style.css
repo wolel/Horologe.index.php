@@ -1,57 +1,75 @@
+*{box-sizing: border-box;}
+html{
+    font-family: "Open Sans", serif;
+    font-size: 10px;
+}
 body{
-    background: #333333;
+    background-color: papayawhip;
+    margin: 0;
+    font-size: 20px;
     display: flex;
-    margin-top: 60px;
+    min-height: 50%;
+    align-items: center;
 }
-#cadre{
-    border: 2px solid #242424;
-    width: 700px;
-    height: 700px;
-    margin: auto;
-    box-shadow: 2px 2px 5px #1d1d1d;
-    background-color: #333;
-!important z-index: 9999;
-
-}
-.aig{
-    position: absolute;
-    bottom: 283px;
-    transform-origin: bottom center;
-
-}
-
-#horloge{
+/*---------------------------*/
+.clock{
+    width: 600px;
+    height: 600px;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin:100px auto;
     position: relative;
-    height: 568px;
-    width: 567px;
-    border: 3px solid white;
-    border-radius: 284px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.73);
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF;
+}
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+.needle{
+    top: 50%;
+    width: 50%;
+    height: 6px;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    background-color: black;
+    position: absolute;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7,0.58,1);
+    /*définie la courbe d'acceleration afin que la vitesse de l'animation puisse changer*/
+}
+
+.cercle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 48%;
+    left: 48%;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+}
+.hour-needle{
+    background-color: red;
+    width: 35%;
+    left: 15%;
+}
+.min-needle{
     background-color: orange;
-    margin: auto;
-
+    width: 45%;
+    left: 5%;
 }
-    #btnAll{
-   position: absolute;
-   margin-top: 750px;
-   margin-left: 470px;
-
-
-}
-#btn{
-    width: auto;
-    height: 100px;
-    transition: transform .4s ease;
-    padding: 10px;
-    background-color: #333;
-    border: none;
-    color: white;
-    margin: auto;
-}
+/*----------------------------BUTTONS-----*/
 #btn1{
     width: auto;
     height: 100px;
     transition: transform .4s ease;
-    padding: 10px;
+    padding: 10px 30px 10px 30px;
     margin: auto;
     background-color: #333;
     border: none;
@@ -59,17 +77,17 @@ body{
     transform: scale(1);
 
 }
-#btn1:active, #btn:active{
+#btn1:active{
     transform: scale(.97);
     transition: transform .2s;
     background-color: orange;
     color: white;
     border-style: none;
 
- }
-#btn1:hover, #btn:hover{
+}
+#btn1:hover{
     background-color: orange;
     color: white;
     border-style: none;
-
+    border-radius: 5px;
 }
