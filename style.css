@@ -10,6 +10,7 @@ body{
     display: flex;
     min-height: 50%;
     align-items: center;
+    font-family: "Open Sans", serif;
 }
 /*---------------------------*/
 .clock{
@@ -64,8 +65,24 @@ body{
     width: 45%;
     left: 5%;
 }
+h1{
+    position: absolute;
+    top: 50%;
+    left:100px;
+    width: auto;
+    height: 100px;
+    transition: transform .4s ease;
+    padding: 10px 30px 10px 30px;
+    margin: auto;
+    border: none;
+    color: papayawhip;
+    transform: scale(1);
+}
 /*----------------------------BUTTONS-----*/
 #btn1{
+    position: absolute;
+    top: 50%;
+    right:100px;
     width: auto;
     height: 100px;
     transition: transform .4s ease;
@@ -90,4 +107,18 @@ body{
     color: white;
     border-style: none;
     border-radius: 5px;
+}
+/*---------------------------RESPONSIVE-----*/
+
+@media screen and (max-width: 800px){
+    .clock{
+        width: 200px;
+        height: 200px;
+    }
+    .cercle{
+        width: 5px;
+        height: 5px;
+
+    }
+
 }
