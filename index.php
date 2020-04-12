@@ -25,8 +25,6 @@ function getMyTimeZone(){
 ?>
 
 
-
-
 <div class="clock">
     <div class="clock-face">
         <h1><?php echo getMyTimeZone();?></h1>

@@ -8,8 +8,9 @@ function setDate() {
     const seconds = now.getSeconds();
     const secDeg = ((seconds/60)*360 + 90);
     //déterminer la position des secondes
-    //comme nous avons mis nos div à transform = rotate(90deg), l'aiguille des seconde
-    secondDiv.style.transform = `rotate(${secDeg}deg)`;// changer la proprieté rotate
+    //comme j'ai mis dans le css 'transform = rotate(90deg)', l'aiguille des sécondes
+    // je dois changer la proprieté rotate
+    secondDiv.style.transform = `rotate(${secDeg}deg)`;
 
     const min = now.getMinutes();
     const minDeg =  ((min/60)*360) + ((seconds/60)*6) + 90;
