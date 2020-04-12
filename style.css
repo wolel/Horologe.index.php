@@ -49,76 +49,127 @@ body{
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 48%;
-    left: 48%;
+    top: 250px;
+    left:250px;
     border-radius: 50%;
     background-color: black;
     z-index: 1;
 }
 .hour-needle{
     background-color: red;
-    width: 35%;
-    left: 15%;
-}
+  }
 .min-needle{
     background-color: orange;
-    width: 45%;
-    left: 5%;
+}
+h3{
+    position: absolute;
+    top: 4%;
+    left: 36%;
+    font-family: "Open Sans", serif;
+    color: #333333;
 }
 h1{
     position: absolute;
-    top: 50%;
-    left:100px;
-    width: auto;
-    height: 100px;
-    transition: transform .4s ease;
-    padding: 10px 30px 10px 30px;
-    margin: auto;
-    border: none;
-    color: papayawhip;
-    transform: scale(1);
+    width: 20px;
+    height: 20px;
+    top: 10%;
+    left: 30%;
+    z-index: 2;
+    font-family: "Open Sans", serif;
+    color: #333333;
 }
 /*----------------------------BUTTONS-----*/
 #btn1{
     position: absolute;
-    top: 50%;
-    right:100px;
-    width: auto;
-    height: 100px;
-    transition: transform .4s ease;
-    padding: 10px 30px 10px 30px;
+    top: -90px;
+    right: 0;
+    left: 0;
+    padding: 20px 30px 20px 30px;
     margin: auto;
-    background-color: #333;
+    background-color: transparent;
     border: none;
     color: white;
-    transform: scale(1);
-
+    cursor: pointer;
 }
-#btn1:active{
-    transform: scale(.97);
-    transition: transform .2s;
-    background-color: orange;
-    color: white;
-    border-style: none;
 
-}
 #btn1:hover{
-    background-color: orange;
+    background-color: #333333;
     color: white;
     border-style: none;
     border-radius: 5px;
 }
-/*---------------------------RESPONSIVE-----*/
-
-@media screen and (max-width: 800px){
+/*=====================RESPONSIVE===========================*/
+@media screen and (max-width:736px){
+    body{
+        background-color: green;
+    }
     .clock{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
+        border: 10px solid white;
+        border-radius: 50%;
     }
     .cercle{
-        width: 5px;
-        height: 5px;
-
+        width: 12px;
+        height: 12px;
+        top: 116px;
+        left:114px;
+    }
+    #btn1{
+        position: absolute;
+        top: -90px;
+        right: 0;
+        left: 0;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 10px;
     }
 
 }
+/*------------------------
+@media screen and (max-width:1024px){
+    body{
+        background-color: red;
+    }
+    .clock{
+        width: 500px;
+        height: 500px;
+        border: 20px solid white;
+        border-radius: 50%;
+        margin:100px auto;
+        position: relative;
+        padding: 20px;
+    }
+    .cercle{
+        width: 17px;
+        height: 17px;
+        top: 49%;
+    }
+    #btn1{
+        position: absolute;
+        top: -90px;
+        right: 0;
+        left: 0;
+    }
+ h1{
+     font-size: 30px;
+ }
+ h3{
+     font-size: 20px;
+ }
+}
+/*================================================================
+@media all and (orientation: portrait){
+
+}
+
+@media all and (orientation: landscape){
+    body{
+        background-color: yellow;
+    }
+}
+
+ */
