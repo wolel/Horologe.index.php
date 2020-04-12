@@ -98,11 +98,38 @@ h1{
     border-style: none;
     border-radius: 5px;
 }
+/*========================FORM===============================*/
+form{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 106%;
+    right: 0;
+    left: 75px;
+    margin-bottom: 30px;
+    padding: 20px 30px 20px 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+form button{
+    margin-left: 20px;
+    background-color: cornflowerblue;
+    border-radius: 6px;
+    border: 1px solid white;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    cursor: pointer;
+}
+select {
+    padding: 10px 50px 10px 50px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 /*=====================RESPONSIVE===========================*/
 @media screen and (max-width:736px){
-    body{
-        background-color: green;
-    }
+
     .clock{
         width: 300px;
         height: 300px;
@@ -127,7 +154,24 @@ h1{
     h3{
         font-size: 10px;
     }
+    form{
+        flex-direction: column;
+        right: 0;
+        left: 0;
+    }
+    form button{
+        right: 0;
+        left: 0;
+        margin-top: 10px;
+        border-radius: 3px;
+        width: 170px;
 
+    }
+    select {
+        padding: 10px 50px 10px 50px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 }
 /*------------------------
 @media screen and (max-width:1024px){

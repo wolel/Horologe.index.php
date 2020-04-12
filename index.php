@@ -1,16 +1,27 @@
 <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" href="style.css">
 
-<?php
-date_default_timezone_set("Europe/Brussels");
 
-if ($_GET['timezone'] == date_default_timezone_set("Africa/Brazzaville")){
-    date_default_timezone_set("Africa/Brazzaville");
-    echo "<p >". $_GET['timezone']."</p>";
-}elseif ($_GET['timezone']=== date_default_timezone_set('America/Costa_Rica')){
-    date_default_timezone_set('America/Costa_Rica');
-    echo "<p>". $_GET['timezone']."</p>";
+<?php
+
+$currentDateTime = '22:15:00';
+$DateTime = date('H:i:s');
+
+function getMyTimeZone(){
+
+    if($_GET['timezone'] === 'Shanghai' ) {
+        date_default_timezone_set("Asia/Shanghai");
+        echo "<p>".$_GET['timezone']."</p>";
+    }elseif($_GET['timezone'] == 'Brazzaville'){
+        date_default_timezone_set("Africa/Brazzaville");
+        echo "<p>".$_GET['timezone']."</p>";
+    }elseif($_GET['timezone'] === 'Brussels'){
+           date_default_timezone_set("Europe/Brussels");
+        echo "<p>".$_GET['timezone']."</p>";
+    }
 }
+
+
 ?>
 
 
@@ -18,8 +29,8 @@ if ($_GET['timezone'] == date_default_timezone_set("Africa/Brazzaville")){
 
 <div class="clock">
     <div class="clock-face">
-        <h1><?php echo date("h:i:sa");?></h1>
-        <h3><?php echo date("d / m / Y");?></h3>
+        <h1><?php echo getMyTimeZone();?></h1>
+        <h3><?php echo date("d / m / Y").'<br>'.date("H:i:sa");?></h3>
         <div class="cercle"></div>
         <div class="needle hour-needle"></div>
         <div class="needle min-needle"></div>
@@ -27,14 +38,15 @@ if ($_GET['timezone'] == date_default_timezone_set("Africa/Brazzaville")){
     </div>
     <button id="btn1" onclick="changeBackgroundColor()">change background color</button>
 
-    <form action="#" method="get">
+    <form action="#" method="GET">
         <select name="timezone" id="timezone">
-            <option value="">--Please choose an option--</option>
-            <option value="Amsterdam">Amsterdam</option>
+            <option value="">Select Country</option>
+            <option value="">--------------</option>
+            <option value="Brussels">Brussels</option>
             <option value="Brazzaville">Brazzaville</option>
-            <option value="Costa_Rica">Costa_Rica</option>
+            <option value="Shanghai">Shanghai</option>
         </select>
-        <button id="btnTimezone">GetTime zone</button>
+        <button>GetTime zone</button>
 
     </form>
 
